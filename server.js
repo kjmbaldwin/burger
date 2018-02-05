@@ -1,7 +1,7 @@
 //dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
-var mathodOverride = reqiure("method-override");
+// var mathodOverride = reqiure("method-override");
 
 var PORT = process.env.PORT || 3000;
 
@@ -20,7 +20,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //routes
-var routes = require("./controllers/catsController.js");
+var routes = require("./controllers/burgers_controller.js");
 app.use(routes);
 
 //listen for webserver

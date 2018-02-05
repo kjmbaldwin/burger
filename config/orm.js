@@ -1,4 +1,3 @@
-// Import MySQL connection.
 var connection = require("../config/connection.js");
 
 // Helper function to convert object key/value pairs to SQL syntax
@@ -25,7 +24,7 @@ function objToSql(ob) {
 }
 
 var orm = {
-  all: function(table, cb){
+  selectAll: function(table, cb){
     var queryStringSQL = "Select * From " + table + ";";
     connection.query(queryStringSQL, function(err, result) {
       if (err) {
@@ -34,7 +33,7 @@ var orm = {
       cb(result);
     }); 
   },
-  create: function(table, column, value, cb){
+  insertOne: function(table, column, value, cb){
     var queryStringSQL = "INSERT INTO " + table + " (" + column.toString() + ") VALUES ?";
     connection.query(queryStringSQL, value, function(err, result) {
       if (err) {
@@ -43,7 +42,7 @@ var orm = {
       cb(result);
     }); 
   },
-  update: function(table, columnValue, condition, cb){
+  updateOne: function(table, columnValue, condition, cb){
     var queryStringSQL = "UPDATE " + table;
 
     queryStringSQL += " SET ";
