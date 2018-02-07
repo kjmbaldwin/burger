@@ -34,7 +34,7 @@ var orm = {
     }); 
   },
   insertOne: function(table, column, value, cb){
-    var queryStringSQL = "INSERT INTO " + table + " (" + column.toString() + ") VALUES ?";
+    var queryStringSQL = "INSERT INTO " + table + " (" + column.toString() + ") VALUES (?)";
     connection.query(queryStringSQL, value, function(err, result) {
       if (err) {
         throw err;
