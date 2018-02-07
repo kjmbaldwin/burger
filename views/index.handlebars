@@ -1,7 +1,7 @@
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      <li>
+      <li class="uneaten">
         {{burger_name}}
         <button class="eat" data-id="{{id}}">Devour!</button>
       </li>
