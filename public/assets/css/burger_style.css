@@ -1,0 +1,13 @@
+.padding-10{
+  padding: 10px;
+}
+
+.uneaten{
+
+}
+
+.eaten{
+  text-decoration: line-through;
+  font-style: italic;
+  color: gray
+}
