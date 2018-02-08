@@ -30,12 +30,16 @@
     </div>
 
     <div class="col-6">
-      <div class="eaten paddding-10">
-        {{#each burgers}}
-          {{#if devoured}}
-            {{burger_name}}
-          {{/if}}
-        {{/each}}
+      <div class="row">
+        <div class="eaten">
+          {{#each burgers}}
+            {{#if devoured}}
+              <div class="col-12">
+                {{burger_name}}
+              </div>
+            {{/if}}
+          {{/each}}
+        </div>
       </div>     
     </div>
   
